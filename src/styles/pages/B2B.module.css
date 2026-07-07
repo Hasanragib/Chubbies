@@ -1,0 +1,87 @@
+.heroSection {
+  border-bottom: none;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-top: 12px;
+}
+
+.heroText {
+  margin-top: 16px;
+  opacity: 0.85;
+  max-width: 440px;
+}
+
+.heroImage {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}
+
+.tagRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.tag {
+  border: 1px solid var(--line);
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.featureCard {
+  border-top: 2px solid var(--basil);
+  padding-top: 14px;
+}
+
+.featureLabel {
+  font-size: 0.95rem;
+}
+
+.midSection {
+  padding-bottom: 48px;
+}
+
+.ctaSection {
+  border-bottom: none;
+}
+
+.ctaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.ctaHeading {
+  font-size: 1.8rem;
+  margin-top: 12px;
+}
+
+.ctaText {
+  margin-top: 16px;
+  opacity: 0.8;
+}
+
+.ctaContact {
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}

@@ -1,0 +1,152 @@
+.introSection {
+  padding-bottom: 48px;
+  border-bottom: none;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-top: 12px;
+}
+
+.introText {
+  margin-top: 16px;
+  max-width: 560px;
+  opacity: 0.85;
+}
+
+/* Cart gallery — showcases the standard franchise cart from multiple angles */
+.gallerySection {
+  padding-top: 0;
+}
+
+.galleryIntro {
+  max-width: 640px;
+}
+
+.galleryText {
+  margin-top: 12px;
+  opacity: 0.8;
+}
+
+.galleryGrid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  height: 520px;
+}
+
+.galleryMain {
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.galleryCell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.galleryImg {
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+.galleryCaption {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    height: auto;
+  }
+
+  .galleryMain {
+    grid-row: auto;
+    height: auto;
+  }
+
+  .galleryCell {
+    height: auto;
+  }
+
+  .galleryMain .galleryImg,
+  .galleryCell .galleryImg {
+    flex: none;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.detailSection {
+  padding-top: 0;
+}
+
+.investmentBadge {
+  display: inline-block;
+  background: var(--hero-yellow);
+  color: var(--forest);
+  padding: 10px 18px;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.benefitList {
+  margin-top: 24px;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 32px;
+  max-width: 800px;
+}
+
+.benefitItem {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.checkmark {
+  color: var(--basil);
+}
+
+.benefitText {
+  opacity: 0.9;
+}
+
+.ctaSection {
+  border-bottom: none;
+}
+
+.ctaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.ctaHeading {
+  font-size: 1.8rem;
+  margin-top: 12px;
+}
+
+.ctaText {
+  margin-top: 16px;
+  opacity: 0.8;
+}

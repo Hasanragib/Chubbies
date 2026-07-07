@@ -1,0 +1,45 @@
+.section {
+  border-bottom: none;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-top: 12px;
+}
+
+.intro {
+  margin-top: 12px;
+  opacity: 0.8;
+  max-width: 520px;
+}
+
+.grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+
+.area {
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+.metaTight {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 4px;
+}

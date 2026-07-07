@@ -1,0 +1,45 @@
+.section {
+  border-bottom: none;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-top: 12px;
+}
+
+.category {
+  margin-top: 48px;
+}
+
+.categoryName {
+  font-size: 1.2rem;
+  color: var(--basil);
+}
+
+.itemList {
+  margin-top: 16px;
+  display: grid;
+  gap: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.itemName {
+  font-size: 1.05rem;
+}
+
+.itemDesc {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  margin-top: 4px;
+}
+
+.itemPrice {
+  font-family: var(--font-mono);
+}

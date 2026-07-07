@@ -1,0 +1,46 @@
+.uspGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.uspCard {
+  border-top: 2px solid var(--hero-yellow);
+  padding-top: 16px;
+}
+
+.uspTitle {
+  font-size: 1.05rem;
+}
+
+.uspDetail {
+  margin-top: 10px;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.ctaSection {
+  border-bottom: none;
+}
+
+.ctaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.ctaHeading {
+  font-size: 2rem;
+  margin-top: 12px;
+}
+
+.ctaText {
+  margin-top: 16px;
+  opacity: 0.85;
+}
+
+.ctaBtn {
+  margin-top: 24px;
+}

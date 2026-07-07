@@ -1,0 +1,56 @@
+.section {
+  border-bottom: none;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-top: 12px;
+}
+
+.intro {
+  margin-top: 12px;
+  opacity: 0.75;
+  max-width: 560px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.list {
+  margin-top: 32px;
+}
+
+.empty {
+  opacity: 0.6;
+}
+
+.leadCard {
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+
+.leadHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leadMeta {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+
+.leadMessage {
+  margin-top: 8px;
+  opacity: 0.75;
+}
+
+.leadDate {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.5;
+  margin-top: 6px;
+}

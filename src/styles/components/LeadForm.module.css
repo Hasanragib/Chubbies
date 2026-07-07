@@ -1,0 +1,25 @@
+.confirmation {
+  padding: 24px;
+  border: 1px solid var(--line);
+}
+
+.confirmationText {
+  margin-top: 8px;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+  max-width: 480px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.errorText {
+  font-size: 0.85rem;
+  color: var(--hero-yellow);
+}
