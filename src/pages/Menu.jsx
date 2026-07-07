@@ -20,7 +20,7 @@ export default function Menu() {
                     <div className={styles.itemName}>{item.name}</div>
                     <div className={styles.itemDesc}>{item.desc}</div>
                   </div>
-                  <div className={styles.itemPrice}>{item.price}</div>
+                  
                 </div>
               ))}
             </div>

@@ -1,11 +1,12 @@
-import { Instagram, Linkedin, Youtube } from 'lucide-react'
-import { useSite } from '../context/SiteContext.jsx'
-import styles from '../styles/components/Footer.module.css'
+import { Instagram, Linkedin, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useSite } from "../context/SiteContext.jsx";
+import styles from "../styles/components/Footer.module.css";
 
-const ICONS = { instagram: Instagram, linkedin: Linkedin, youtube: Youtube }
+const ICONS = { instagram: Instagram, linkedin: Linkedin, youtube: Youtube };
 
 export default function Footer() {
-  const { brand, contact, socials, carts } = useSite()
+  const { brand, contact, socials, carts } = useSite();
 
   return (
     <footer className={styles.footer}>
@@ -13,7 +14,11 @@ export default function Footer() {
         {/* Logo + name + trust stat + socials */}
         <div>
           <div className={styles.brandRow}>
-            <img src={brand.logo} alt={`${brand.name} logo`} className={styles.logo} />
+            <img
+              src={brand.logo}
+              alt={`${brand.name} logo`}
+              className={styles.logo}
+            />
             <div>
               <div className={styles.brandName}>{brand.name}</div>
               <div className={styles.tagline}>{brand.tagline}</div>
@@ -22,7 +27,7 @@ export default function Footer() {
 
           <div className={styles.socialRow}>
             {socials.map(({ id, href, label }) => {
-              const Icon = ICONS[id]
+              const Icon = ICONS[id];
               return (
                 <a
                   key={label}
@@ -34,7 +39,7 @@ export default function Footer() {
                 >
                   <Icon size={17} strokeWidth={1.8} />
                 </a>
-              )
+              );
             })}
           </div>
         </div>
@@ -43,7 +48,15 @@ export default function Footer() {
         <div className={styles.columnCentered}>
           <div className={`eyebrow ${styles.columnLabel}`}>Find our carts</div>
           <div className={styles.stackedListTight}>
-            {carts.map(c => <span key={c}>{c}</span>)}
+            {carts.map((c) => (
+              <Link
+                key={c}
+                to={`/locations`}
+                className={styles.cartLink}
+              >
+                <span>{c}</span>
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -61,9 +74,11 @@ export default function Footer() {
       {/* Rights reserved — full-width bottom bar */}
       <div className={styles.bottomBar}>
         <div className={`container ${styles.bottomBarInner}`}>
-          <span>© {brand.established} {brand.name}. All rights reserved.</span>
+          <span>
+            © {brand.established} {brand.name}. All rights reserved.
+          </span>
         </div>
       </div>
     </footer>
-  )
+  );
 }

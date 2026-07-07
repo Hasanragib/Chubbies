@@ -38,7 +38,7 @@ export const SITE = {
     { id: 'youtube', label: 'YouTube', href: 'https://youtube.com' },
   ],
 
-  carts: ['Pandav Nagar', 'Vinod Nagar', 'Laxmi Nagar'],
+  carts: ['Pandav Nagar, Delhi ', 'Vinod Nagar, Delhi', '& More'],
 
   stats: {
     customers: '5,000+',
