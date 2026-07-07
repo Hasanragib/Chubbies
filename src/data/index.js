@@ -141,10 +141,9 @@ export const SITE = {
 
   // Placeholder outlet list — swap for real locations once you have them.
   outlets: [
-    { city: 'Delhi', area: 'Rajouri Garden', phone: '+91 90000 00001', hours: '11 AM – 11 PM' },
-    { city: 'Gurugram', area: 'Sector 29', phone: '+91 90000 00002', hours: '11 AM – 11 PM' },
-    { city: 'Noida', area: 'Sector 18', phone: '+91 90000 00003', hours: '11 AM – 11 PM' },
-    { city: 'Lucknow', area: 'Hazratganj', phone: '+91 90000 00004', hours: '12 PM – 10:30 PM' },
+    { city: 'Delhi', area: 'Pandav Nagar', phone: '+918800797710, +918448422646 ', hours: '7 PM – 11 PM' },
+    { city: 'Delhi', area: 'Vinod Nagar, Coming Soon', phone: '', hours: '' },
+    { city: 'Delhi', area: 'Laxmi Nagar, Coming Soon', phone: '', hours: '' },
   ],
 }
 
