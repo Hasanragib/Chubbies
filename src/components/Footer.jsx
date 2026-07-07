@@ -51,6 +51,7 @@ export default function Footer() {
         <div className={styles.column}>
           <div className={`eyebrow ${styles.columnLabel}`}>Contact Us</div>
           <div className={styles.stackedList}>
+            <span>+91 8800797710</span>
             <span>{contact.phone}</span>
             <span>{contact.email}</span>
           </div>

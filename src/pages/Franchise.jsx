@@ -71,7 +71,7 @@ export default function Franchise() {
             <p className={styles.ctaText}>
               Our team reviews every enquiry and calls back — usually within two
               business days. For a faster response, DM {contact.instagramHandle} or
-              call {contact.phone}.
+              call +91 8800797710, {contact.phone}.
             </p>
           </div>
           <LeadForm type="franchise" onDark />

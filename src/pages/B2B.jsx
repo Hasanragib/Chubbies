@@ -56,7 +56,7 @@ export default function B2B() {
               trusted by vendors, 100% satisfaction.
             </p>
             <p className={styles.ctaContact}>
-              {contact.phone} · {contact.instagramHandle}
+              +91 8800797710 · {contact.phone} · {contact.instagramHandle}
             </p>
           </div>
           <LeadForm type="bulk" onDark />
