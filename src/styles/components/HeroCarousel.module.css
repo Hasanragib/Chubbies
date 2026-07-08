@@ -176,7 +176,8 @@
   }
 
   .priceBadge {
-    bottom: 76px;
+    top: 16px;
+    bottom: auto;
     right: 16px;
     padding: 10px 14px;
   }
