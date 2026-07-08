@@ -16,19 +16,19 @@ export const SITE = {
     name: "Chubbies",
     tagline: "Bhook lage? Yahein ruko.",
     established: 2026,
-    logo: "/logo.png",
+    logo: "/logo.webp",
     cartGallery: [
       {
-        src: "/cart-render-1.jpg",
+        src: "/cart-render-1.webp",
         caption:
           "Studio front view — LED-lit canopy, twin bamboo steamers, built-in signage.",
       },
       {
-        src: "/cart-render-2.jpg",
+        src: "/cart-render-2.webp",
         caption: "On-site at a mall entrance — the same cart, ready to trade.",
       },
       {
-        src: "/cart-render-3.jpg",
+        src: "/cart-render-3.webp",
         caption:
           "Every branded panel, wheel, and light comes standard — no customisation needed.",
       },
@@ -51,7 +51,11 @@ export const SITE = {
       href: "https://instagram.com/onlychubbies",
     },
     { id: "linkedin", label: "LinkedIn", href: "https://linkedin.com" },
-    { id: "youtube", label: "YouTube", href: "https://youtube.com" },
+    {
+      id: "youtube",
+      label: "YouTube",
+      href: "https://www.youtube.com/@onlychubbies",
+    },
   ],
 
   // Short list for the footer's "Find our carts" column — links through to /locations
@@ -68,38 +72,38 @@ export const SITE = {
     { to: "/franchise", label: "Franchise" },
     { to: "/menu", label: "Menu" },
     { to: "/locations", label: "Find Us" },
-    { to: "/bulk-orders", label: "Bulk Orders" },
+    { to: "/bulkOrders", label: "Bulk Orders" },
   ],
 
   // Home hero carousel — each slide pairs one photo with one headline
   heroSlides: [
     {
-      src: "/momos.PNG",
+      src: "/momos.webp",
       alt: "Steamed momos in a bamboo basket with chilli dip",
       headline: "Steamed fresh. Franchised smart.",
     },
     {
-      src: "/momos2.PNG",
+      src: "/momos2.webp",
       alt: "Steamed momos in a bamboo basket",
       headline: "Unforgettable flavour. Served hygienically.",
     },
     {
-      src: "/KurkureMomos.png",
+      src: "/KurkureMomos.webp",
       alt: "Fried momos plated with dips",
       headline: "Every bite is made to impress.",
     },
     {
-      src: "/momos3.PNG",
+      src: "/momos3.webp",
       alt: "Steamed momos",
       headline: "Flavor beyond expectations. Authentic taste.",
     },
     {
-      src: "/momos1.PNG",
+      src: "/momos1.webp",
       alt: "Steamed momos",
       headline: "Freshness crafted. Quality guaranteed.",
     },
     {
-      src: "/SpringRolls.PNG",
+      src: "/SpringRolls.webp",
       alt: "Steamed momos",
       headline: "Start. Grow. Succeed. Together.",
     },
@@ -207,15 +211,23 @@ export const SITE = {
       city: "Delhi",
       area: "Pandav Nagar",
       phone: "+91 88007 97710, +91 84484 22646",
-      hours: "7 PM – 11 PM",
+      hours: "6 PM to 11 PM",
+      location: "https://maps.app.goo.gl/fb2NEXTa1ZhQNHRe8",
     },
     {
       city: "Delhi",
       area: "Vinod Nagar",
       phone: "+91 88007 97710",
-      hours: "7 PM – 11 PM",
+      hours: "6 PM to 11 PM",
+      location: "https://maps.app.goo.gl/gQgSTMAsgG64uUVD8",
     },
-    { city: "Delhi", area: "Laxmi Nagar", phone: "", hours: "Coming soon" },
+    {
+      city: "Delhi",
+      area: "Laxmi Nagar",
+      phone: "",
+      hours: "Coming soon",
+      location: "",
+    },
   ],
 };
 

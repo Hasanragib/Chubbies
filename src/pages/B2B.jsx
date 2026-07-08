@@ -1,9 +1,9 @@
-import LeadForm from '../components/LeadForm.jsx'
-import { useSite } from '../context/SiteContext.jsx'
-import styles from '../styles/pages/B2B.module.css'
+import LeadForm from "../components/LeadForm.jsx";
+import { useSite } from "../context/SiteContext.jsx";
+import styles from "../styles/pages/B2B.module.css";
 
 export default function B2B() {
-  const { contact, b2b } = useSite()
+  const { contact, b2b } = useSite();
 
   return (
     <>
@@ -12,15 +12,17 @@ export default function B2B() {
           <div>
             <div className="eyebrow">Wholesale supply</div>
             <h1 className={styles.heading}>
-              Momos starting ₹4/piece.<br />Best quality, best price.
+              Momos starting ₹4/piece.
+              <br />
+              Best quality, best price.
             </h1>
             <p className={styles.heroText}>
-              Consistent taste, happy customers, repeat orders — wholesale supply
-              built for anyone reselling momos under their own brand.
+              Consistent taste, happy customers, repeat orders — wholesale
+              supply built for anyone reselling momos under their own brand.
             </p>
           </div>
           <img
-            src="/bulk-order.jpg"
+            src="/bulk-order.webp"
             alt="Chubbies bulk order packaging — premium momo boxes and supply crate"
             className={styles.heroImage}
           />
@@ -31,13 +33,15 @@ export default function B2B() {
         <div className="container">
           <div className="eyebrow">Perfect for</div>
           <div className={styles.tagRow}>
-            {b2b.perfectFor.map(p => (
-              <span key={p} className={styles.tag}>{p}</span>
+            {b2b.perfectFor.map((p) => (
+              <span key={p} className={styles.tag}>
+                {p}
+              </span>
             ))}
           </div>
 
           <div className={styles.featureGrid}>
-            {b2b.features.map(f => (
+            {b2b.features.map((f) => (
               <div key={f} className={styles.featureCard}>
                 <span className={styles.featureLabel}>{f}</span>
               </div>
@@ -63,5 +67,5 @@ export default function B2B() {
         </div>
       </section>
     </>
-  )
+  );
 }

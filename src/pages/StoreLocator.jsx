@@ -16,16 +16,40 @@ export default function StoreLocator() {
         </p>
 
         <div className={styles.grid}>
-          {outlets.map((o) => (
-            <div key={o.area} className={styles.card}>
-              <div className="eyebrow">{o.city}</div>
-              <h3 className={styles.area}>{o.area}</h3>
-              {o.phone && <p className={styles.meta}>{o.phone}</p>}
-              <p className={o.phone ? styles.metaTight : styles.comingSoon}>
-                {o.hours}
-              </p>
-            </div>
-          ))}
+          {outlets.map((o) => {
+            // Check if THIS specific outlet has a location link decided
+            const isLinkReady = o.location && o.location.trim() !== "";
+
+            return isLinkReady ? (
+              // 1. Clickable Card for active locations
+              <a
+                key={o.area}
+                href={o.location}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.card}
+              >
+                <div className="eyebrow">{o.city}</div>
+                <h3 className={styles.area}>{o.area}</h3>
+                {o.phone && <p className={styles.meta}>{o.phone}</p>}
+                <p className={o.phone ? styles.metaTight : styles.comingSoon}>
+                  {o.hours}
+                </p>
+              </a>
+            ) : (
+              <div
+                key={o.area}
+                className={`${styles.card}`}
+              >
+                <div className="eyebrow">{o.city}</div>
+                <h3 className={styles.area}>{o.area}</h3>
+                {o.phone && <p className={styles.meta}>{o.phone}</p>}
+                <p className={o.phone ? styles.metaTight : styles.comingSoon}>
+                  {o.hours}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

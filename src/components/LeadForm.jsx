@@ -10,7 +10,7 @@ export default function LeadForm({ type = 'franchise', onDark = false }) {
 
   function update(field, value) {
     setForm(prev => ({ ...prev, [field]: value }))
-  }
+  }                     
 
   // After a successful send, show the confirmation briefly, then reset
   // back to an empty form so the person (or someone else) can submit again

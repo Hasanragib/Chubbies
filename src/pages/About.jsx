@@ -30,7 +30,7 @@ export default function About() {
               hungry? Stop here.
             </p>
           </div>
-          <img src="/cart-render-1.jpg" alt={`The original ${brand.name} cart`} className={styles.cartImage} />
+          <img src="/cart-render-1.webp" alt={`The original ${brand.name} cart`} className={styles.cartImage} />
         </div>
 
         <p className={styles.paragraphTight}>
