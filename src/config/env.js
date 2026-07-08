@@ -7,6 +7,7 @@
 export const ENV = {
   contact: {
     phone: import.meta.env.VITE_CONTACT_PHONE || '+91 88007 97710',
+    phone2: import.meta.env.VITE_CONTACT_PHONE_2 || '+91 84484 22646',
     email: import.meta.env.VITE_CONTACT_EMAIL || 'hello@chubbies.in',
     // Digits only, country code first, no + or spaces — required format for wa.me links
     whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER || '918800797710',

@@ -20,8 +20,10 @@ export default function StoreLocator() {
             <div key={o.area} className={styles.card}>
               <div className="eyebrow">{o.city}</div>
               <h3 className={styles.area}>{o.area}</h3>
-              <p className={styles.meta}>{o.phone}</p>
-              <p className={styles.metaTight}>{o.hours}</p>
+              {o.phone && <p className={styles.meta}>{o.phone}</p>}
+              <p className={o.phone ? styles.metaTight : styles.comingSoon}>
+                {o.hours}
+              </p>
             </div>
           ))}
         </div>

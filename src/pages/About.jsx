@@ -3,10 +3,14 @@ import { formatList } from '../data/index.js'
 import styles from '../styles/pages/About.module.css'
 
 export default function About() {
-  const { brand, carts, stats } = useSite()
+  const { brand, outlets, stats } = useSite()
+
+  const areas = outlets.map(o => o.area)
+  const live = outlets.filter(o => o.phone)
+  const comingSoon = outlets.filter(o => !o.phone)
 
   const aboutStats = [
-    { n: String(carts.length), l: `Carts — ${formatList(carts)}` },
+    { n: String(outlets.length), l: `Carts — ${formatList(areas)}` },
     { n: stats.customers, l: 'Served' },
     { n: String(brand.established), l: 'Established' },
   ]
@@ -19,7 +23,7 @@ export default function About() {
             <div className="eyebrow">Our story</div>
             <h1 className={styles.heading}>{brand.name} — Est. {brand.established}</h1>
             <p className={styles.paragraph}>
-              {brand.name} started with one cart on a street corner in {carts[0]} in
+              {brand.name} started with one cart on a street corner in {live[0]?.area} in
               {' '}{brand.established} — a bamboo steamer, a stove, and a recipe worth
               queuing for. There was no ad spend and no big launch. Just hot momos,
               served fast, and a line that kept coming back: "{brand.tagline}" —
@@ -32,14 +36,10 @@ export default function About() {
         <p className={styles.paragraphTight}>
           Word travelled the old-fashioned way — one satisfied customer
           telling the next one in line. No ads, no discounts, just momos
-          steamed fresh and served fast, cart after cart. That's what took us
-          from one stall to {carts.length} carts now open in {formatList(carts)},
-          each run on the exact same recipe, the exact same hygiene standard,
-          and the exact same promise: freshly made, frozen &amp; hygienic,
-          every batch, every time. That promise has already brought us{' '}
-          {stats.customers} served — and it's exactly what we hand over,
-          unchanged, to every franchisee who opens a {brand.name} cart in
-          their own city.
+          steamed fresh and served fast. That promise has already brought us
+          {' '}{stats.customers} served at {formatList(live.map(o => o.area))} —
+          and it's exactly what's coming next to {formatList(comingSoon.map(o => o.area))},
+          and to every franchisee who opens a {brand.name} cart in their own city.
         </p>
         <div className={styles.statGrid}>
           {aboutStats.map(s => (

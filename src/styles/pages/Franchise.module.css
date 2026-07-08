@@ -70,29 +70,6 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 800px) {
-  .galleryGrid {
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    height: auto;
-  }
-
-  .galleryMain {
-    grid-row: auto;
-    height: auto;
-  }
-
-  .galleryCell {
-    height: auto;
-  }
-
-  .galleryMain .galleryImg,
-  .galleryCell .galleryImg {
-    flex: none;
-    aspect-ratio: 4 / 3;
-  }
-}
-
 .detailSection {
   padding-top: 0;
 }
@@ -149,4 +126,35 @@
 .ctaText {
   margin-top: 16px;
   opacity: 0.8;
+}
+
+@media (max-width: 800px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    height: auto;
+  }
+
+  .galleryMain {
+    grid-row: auto;
+    height: auto;
+  }
+
+  .galleryCell {
+    height: auto;
+  }
+
+  .galleryMain .galleryImg,
+  .galleryCell .galleryImg {
+    flex: none;
+    aspect-ratio: 4 / 3;
+  }
+
+  .benefitList {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaGrid {
+    grid-template-columns: 1fr;
+  }
 }

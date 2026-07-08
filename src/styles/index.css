@@ -20,7 +20,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; overflow-y: visible; }
 
 body {
   margin: 0;
@@ -29,6 +29,8 @@ body {
   font-family: var(--font-body);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 h1, h2, h3 {
@@ -172,4 +174,14 @@ label {
   opacity: 0.75;
   display: block;
   margin-bottom: 6px;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
 }

@@ -1,12 +1,12 @@
-import { Instagram, Linkedin, Youtube } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useSite } from "../context/SiteContext.jsx";
-import styles from "../styles/components/Footer.module.css";
+import { Link } from 'react-router-dom'
+import { Instagram, Linkedin, Youtube } from 'lucide-react'
+import { useSite } from '../context/SiteContext.jsx'
+import styles from '../styles/components/Footer.module.css'
 
-const ICONS = { instagram: Instagram, linkedin: Linkedin, youtube: Youtube };
+const ICONS = { instagram: Instagram, linkedin: Linkedin, youtube: Youtube }
 
 export default function Footer() {
-  const { brand, contact, socials, carts } = useSite();
+  const { brand, contact, socials, carts } = useSite()
 
   return (
     <footer className={styles.footer}>
@@ -14,11 +14,7 @@ export default function Footer() {
         {/* Logo + name + trust stat + socials */}
         <div>
           <div className={styles.brandRow}>
-            <img
-              src={brand.logo}
-              alt={`${brand.name} logo`}
-              className={styles.logo}
-            />
+            <img src={brand.logo} alt={`${brand.name} logo`} className={styles.logo} />
             <div>
               <div className={styles.brandName}>{brand.name}</div>
               <div className={styles.tagline}>{brand.tagline}</div>
@@ -27,7 +23,7 @@ export default function Footer() {
 
           <div className={styles.socialRow}>
             {socials.map(({ id, href, label }) => {
-              const Icon = ICONS[id];
+              const Icon = ICONS[id]
               return (
                 <a
                   key={label}
@@ -39,24 +35,18 @@ export default function Footer() {
                 >
                   <Icon size={17} strokeWidth={1.8} />
                 </a>
-              );
+              )
             })}
           </div>
         </div>
 
-        {/* Cart locations — centered middle column */}
+        {/* Cart locations — centered middle column, links through to the full locations page */}
         <div className={styles.columnCentered}>
-          <div className={`eyebrow ${styles.columnLabel}`}>Find our carts</div>
+          <Link to="/locations" className={`eyebrow ${styles.columnLabel} ${styles.columnLink}`}>
+            Find our carts
+          </Link>
           <div className={styles.stackedListTight}>
-            {carts.map((c) => (
-              <Link
-                key={c}
-                to={`/locations`}
-                className={styles.cartLink}
-              >
-                <span>{c}</span>
-              </Link>
-            ))}
+            {carts.map(c => <span key={c}>{c}</span>)}
           </div>
         </div>
 
@@ -64,8 +54,8 @@ export default function Footer() {
         <div className={styles.column}>
           <div className={`eyebrow ${styles.columnLabel}`}>Contact Us</div>
           <div className={styles.stackedList}>
-            <span>+91 8800797710</span>
             <span>{contact.phone}</span>
+            <span>{contact.phone2}</span>
             <span>{contact.email}</span>
           </div>
         </div>
@@ -74,11 +64,9 @@ export default function Footer() {
       {/* Rights reserved — full-width bottom bar */}
       <div className={styles.bottomBar}>
         <div className={`container ${styles.bottomBarInner}`}>
-          <span>
-            © {brand.established} {brand.name}. All rights reserved.
-          </span>
+          <span>© {brand.established} {brand.name}. All rights reserved.</span>
         </div>
       </div>
     </footer>
-  );
+  )
 }

@@ -23,3 +23,9 @@
   font-size: 0.85rem;
   color: var(--hero-yellow);
 }
+
+@media (max-width: 420px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

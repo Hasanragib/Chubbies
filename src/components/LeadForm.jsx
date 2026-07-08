@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { ENV, isEmailConfigured } from '../config/env.js'
 import ContactOptions from './ContactOptions.jsx'
@@ -11,6 +11,15 @@ export default function LeadForm({ type = 'franchise', onDark = false }) {
   function update(field, value) {
     setForm(prev => ({ ...prev, [field]: value }))
   }
+
+  // After a successful send, show the confirmation briefly, then reset
+  // back to an empty form so the person (or someone else) can submit again
+  // without needing to refresh the page themselves.
+  useEffect(() => {
+    if (status !== 'sent') return
+    const timer = setTimeout(() => setStatus('idle'), 4000)
+    return () => clearTimeout(timer)
+  }, [status])
 
   async function handleSubmit(e) {
     e.preventDefault()

@@ -44,3 +44,14 @@
 .ctaBtn {
   margin-top: 24px;
 }
+
+@media (max-width: 700px) {
+  .uspGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ctaGrid {
+    grid-template-columns: 1fr;
+  }
+}

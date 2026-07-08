@@ -148,3 +148,44 @@
 .dotActive {
   background: var(--hero-yellow);
 }
+
+@media (max-width: 640px) {
+  .hero {
+    height: calc(100svh - 72px);
+    min-height: 520px;
+  }
+
+  .textInner {
+    max-width: 100%;
+  }
+
+  .subtext {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .ctaRow a {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .priceBadge {
+    bottom: 76px;
+    right: 16px;
+    padding: 10px 14px;
+  }
+
+  .priceMain {
+    font-size: 1.25rem;
+  }
+
+  .dots {
+    bottom: 16px;
+  }
+}

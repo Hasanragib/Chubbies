@@ -6,11 +6,15 @@
 
 .inner {
   padding: 64px 24px 40px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
   gap: 40px;
-  align-items: flex-start;
+  align-items: start;
+}
+
+.inner > * {
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .brandRow {
@@ -72,6 +76,14 @@
   margin-bottom: 14px;
 }
 
+.columnLink {
+  display: block;
+}
+
+.columnLink:hover {
+  text-decoration: underline;
+}
+
 .stackedList {
   display: grid;
   gap: 8px;
@@ -97,4 +109,15 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .columnCentered {
+    text-align: left;
+  }
 }
