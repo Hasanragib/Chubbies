@@ -43,6 +43,51 @@ export const SITE = {
     instagramHandle: "@onlychubbies",
   },
 
+  seo: {
+    home: {
+      title: "Momo Franchise & Cart Business",
+      description:
+        "India's fastest-growing momo cart brand — ₹99,000 franchise, no royalty, and carts live in Delhi. Bhook lage? Yahein ruko.",
+      path: "/",
+    },
+    about: {
+      title: "Our Story",
+      description:
+        "From one cart in Pandav Nagar to a growing momo brand across Delhi — the Chubbies story.",
+      path: "/about",
+    },
+    franchise: {
+      title: "Franchise Opportunity — ₹99,000, No Royalty",
+      description:
+        "Own a Chubbies momo cart in your city. ₹99,000 all-in investment, FOFO model, no royalty, full brand support.",
+      path: "/franchise",
+    },
+    menu: {
+      title: "Menu",
+      description:
+        "Steamed, fried, and gravy momos — see the full Chubbies menu and prices.",
+      path: "/menu",
+    },
+    locations: {
+      title: "Find a Cart Near You",
+      description:
+        "Chubbies momo cart locations in Delhi — Pandav Nagar, Vinod Nagar, and Laxmi Nagar.",
+      path: "/locations",
+    },
+    bulkOrders: {
+      title: "Bulk & Wholesale Momos — Starting ₹4/piece",
+      description:
+        "Wholesale momo supply for vendors, cafes, cloud kitchens, and events. Freshly made, frozen & hygienic, pan-India delivery.",
+      path: "/bulkOrders",
+    },
+    enquiry: {
+      title: "Contact",
+      description:
+        "Get in touch with Chubbies for franchise enquiries, bulk orders, or general questions.",
+      path: "/contact",
+    },
+  },
+
   // icon is a string key — mapped to an actual icon component where it's rendered
   socials: [
     {
@@ -211,14 +256,14 @@ export const SITE = {
       city: "Delhi",
       area: "Pandav Nagar",
       phone: "+91 88007 97710, +91 84484 22646",
-      hours: "6 PM to 11 PM",
-      location: "https://maps.app.goo.gl/fb2NEXTa1ZhQNHRe8",
+      hours: "5 PM to 11 PM",
+      location: "https://maps.app.goo.gl/jkPqr1uvNiMNhxXP9",
     },
     {
       city: "Delhi",
       area: "Vinod Nagar",
       phone: "+91 88007 97710",
-      hours: "6 PM to 11 PM",
+      hours: "5 PM to 11 PM",
       location: "https://maps.app.goo.gl/gQgSTMAsgG64uUVD8",
     },
     {

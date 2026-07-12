@@ -1,11 +1,13 @@
 import { useSite } from "../context/SiteContext.jsx";
+import SEO from "../components/SEO.jsx";
 import styles from "../styles/pages/Menu.module.css";
 
 export default function Menu() {
-  const { menuCategories } = useSite();
+  const { menuCategories, seo } = useSite();
 
   return (
     <section className={`section ${styles.section}`}>
+      <SEO {...seo.menu} />
       <div className="container">
         <div className="eyebrow">On the steamer today</div>
         <h1 className={styles.heading}>Menu</h1>

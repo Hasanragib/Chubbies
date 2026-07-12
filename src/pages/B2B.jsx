@@ -1,12 +1,14 @@
 import LeadForm from "../components/LeadForm.jsx";
+import SEO from "../components/SEO.jsx";
 import { useSite } from "../context/SiteContext.jsx";
 import styles from "../styles/pages/B2B.module.css";
 
 export default function B2B() {
-  const { contact, b2b } = useSite();
+  const { contact, b2b, seo } = useSite();
 
   return (
     <>
+      <SEO {...seo.bulkOrders} />
       <section className={`section section--yellow ${styles.heroSection}`}>
         <div className={`container ${styles.heroGrid}`}>
           <div>

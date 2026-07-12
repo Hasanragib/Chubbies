@@ -1,11 +1,13 @@
 import { useSite } from "../context/SiteContext.jsx";
+import SEO from "../components/SEO.jsx";
 import styles from "../styles/pages/StoreLocator.module.css";
 
 export default function StoreLocator() {
-  const { outlets } = useSite();
+  const { outlets, seo } = useSite();
 
   return (
     <section className={`section ${styles.section}`}>
+      <SEO {...seo.locations} />
       <div className="container">
         <div className="eyebrow">Find us</div>
         <h1 className={styles.heading}>Outlets</h1>
@@ -37,10 +39,7 @@ export default function StoreLocator() {
                 </p>
               </a>
             ) : (
-              <div
-                key={o.area}
-                className={`${styles.card}`}
-              >
+              <div key={o.area} className={`${styles.card}`}>
                 <div className="eyebrow">{o.city}</div>
                 <h3 className={styles.area}>{o.area}</h3>
                 {o.phone && <p className={styles.meta}>{o.phone}</p>}

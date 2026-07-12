@@ -1,16 +1,73 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chubbies — Bhook lage? Yahein ruko.</title>
-    <link rel="icon" type="image/webp" href="/logo.webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO tags — default/fallback values. Individual pages override
+         title + description at runtime via src/components/SEO.jsx -->
+  <title>Chubbies — Momo Franchise & Cart Business | Bhook lage? Yahein ruko.</title>
+  <meta name="description"
+    content="Chubbies is India's fastest-growing momo cart brand. Own a franchise for ₹99,000 with no royalty, or find your nearest Chubbies cart in Delhi. Bhook lage? Yahein ruko." />
+  <meta name="keywords"
+    content="momos franchise, momo cart business, Chubbies momos, momo franchise India, street food franchise Delhi, momo business investment" />
+  <link rel="canonical" href="https://chubbies.co.in/" />
+
+  <!-- Open Graph — controls how the site looks when shared on WhatsApp, Facebook, LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Chubbies" />
+  <meta property="og:title" content="Chubbies — Momo Franchise & Cart Business" />
+  <meta property="og:description"
+    content="India's fastest-growing momo cart brand. Low-investment franchise, no royalty, proven cart-based model." />
+  <meta property="og:image" content="https://chubbies.co.in/momos.webp" />
+  <meta property="og:url" content="https://chubbies.co.in/" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chubbies — Momo Franchise & Cart Business" />
+  <meta name="twitter:description"
+    content="India's fastest-growing momo cart brand. Low-investment franchise, no royalty, proven cart-based model." />
+  <meta name="twitter:image" content="https://chubbies.co.in/momos.webp" />
+
+  <meta name="theme-color" content="#283F24" />
+  <link rel="icon" type="image/webp" href="/logo.webp" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Structured data — helps Google understand this is a real food business,
+         can surface hours/rating/type in search results -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "name": "Chubbies",
+      "description": "India's fastest-growing momo cart brand — franchise and wholesale momo supply.",
+      "url": "https://chubbies.co.in/",
+      "logo": "https://chubbies.co.in/logo.webp",
+      "image": "https://chubbies.co.in/momos.webp",
+      "servesCuisine": "Tibetan, Momos, Street Food",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Delhi",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://instagram.com/onlychubbies"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
